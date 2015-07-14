@@ -5,6 +5,7 @@
 
 app:
   build: .
+  dockerfile: Dockerfile-dev
   links:
     - mongo
   ports:

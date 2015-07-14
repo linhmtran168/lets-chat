@@ -1,0 +1,23 @@
+FROM node:0.12-slim
+MAINTAINER SD Elements
+
+RUN mkdir -p /usr/src/app
+COPY . /usr/src/app
+
+RUN apt-get update
+
+RUN apt-get install -y g++ gcc git make python --no-install-recommends
+
+WORKDIR /usr/src/app
+
+ENV LCB_DATABASE_URI=mongodb://mongo/letschat \
+    LCB_HTTP_HOST=0.0.0.0 \
+    LCB_HTTP_PORT=8080 \
+    LCB_XMPP_ENABLE=true \
+    LCB_XMPP_PORT=5222
+
+EXPOSE 8080 5222
+
+VOLUME ["/usr/src/app"]
+
+CMD ["npm", "start"]
