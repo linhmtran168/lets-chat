@@ -9,10 +9,16 @@ app:
   links:
     - mongo
   ports:
-    - 80:8080
     - 5222:5222
   volumes:
     - .:/usr/src/app
 
 mongo:
   image: mongo:latest
+
+nginx:
+  build: /home/linhtm/Dev/github.com/linhmtran168/docker-node-nginx
+  ports:
+    - 80:80
+  links:
+    - app

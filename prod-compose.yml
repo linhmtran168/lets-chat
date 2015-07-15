@@ -8,8 +8,14 @@ app:
   links:
     - mongo
   ports:
-    - 80:8080
     - 5222:5222
 
 mongo:
   image: mongo:latest
+
+nginx:
+  image: linhmtran168/node-nginx:latest
+  links:
+    - app
+  ports:
+    - 80:80

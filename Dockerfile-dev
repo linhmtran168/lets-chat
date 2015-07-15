@@ -2,7 +2,6 @@ FROM node:0.12-slim
 MAINTAINER SD Elements
 
 RUN mkdir -p /usr/src/app
-COPY . /usr/src/app
 
 RUN apt-get update
 
@@ -17,7 +16,5 @@ ENV LCB_DATABASE_URI=mongodb://mongo/letschat \
     LCB_XMPP_PORT=5222
 
 EXPOSE 8080 5222
-
-VOLUME ["/usr/src/app"]
 
 CMD ["npm", "start"]
