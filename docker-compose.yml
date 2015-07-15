@@ -17,7 +17,7 @@ mongo:
   image: mongo:latest
 
 nginx:
-  build: /home/linhtm/Dev/github.com/linhmtran168/docker-node-nginx
+  image: linhmtran168/node-nginx
   ports:
     - 80:80
   links:
