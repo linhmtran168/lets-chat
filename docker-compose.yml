@@ -12,6 +12,8 @@ app:
     - 5222:5222
   volumes:
     - .:/usr/src/app
+  environment:
+    TITLE: "Hello Hanoi vietnam"
 
 mongo:
   image: mongo:latest
