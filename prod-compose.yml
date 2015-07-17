@@ -7,8 +7,8 @@ app:
   image: linhmtran168/lets-chat:latest
   links:
     - mongo
-  ports:
-    - 5222:5222
+  environment:
+    GREETING: "Hello DockerCon"
 
 mongo:
   image: mongo:latest
