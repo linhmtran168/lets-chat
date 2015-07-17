@@ -3,20 +3,21 @@
 #
 # Usage: docker-compose up
 
+mongo:
+  image: mongo:latest
+
 app:
   build: .
   dockerfile: Dockerfile-dev
   links:
     - mongo
-  ports:
-    - 5222:5222
+  # Port fox XMPP, not necessary
+  # ports:
+  #   - 5222:5222
   volumes:
     - .:/usr/src/app
   environment:
     TITLE: "Hello Hanoi vietnam"
-
-mongo:
-  image: mongo:latest
 
 nginx:
   image: linhmtran168/node-nginx
