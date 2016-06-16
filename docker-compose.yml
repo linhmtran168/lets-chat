@@ -4,8 +4,6 @@ app:
     - mongo
   ports:
     - 8080
-  scale:
-
 
 mongo:
   image: mongo:latest
