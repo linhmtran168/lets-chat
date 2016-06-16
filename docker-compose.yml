@@ -1,10 +1,9 @@
 app:
-  image: sdelements/lets-chat
+  image: linhmtran168/lets-chat
   links:
     - mongo
   ports:
     - 8080
-    - 5222
   scale:
 
 
