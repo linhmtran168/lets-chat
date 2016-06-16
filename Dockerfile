@@ -21,7 +21,7 @@ RUN set -x \
 &&  rm -rf /tmp/npm* \
 &&  apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false $BUILD_DEPS
 
-ENV TAR_GZ_URL=https://github.com/linhmtran168/lets-chat/archive/master.tar.gz \
+ENV TAR_GZ_URL=https://github.com/linhmtran168/lets-chat/archive/master.tar.gz
 ADD $TAR_GZ_URL ./master.tar.gz
 
 RUN tar -xzvf master.tar.gz \
