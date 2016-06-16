@@ -2,8 +2,6 @@ app:
   image: linhmtran168/lets-chat
   links:
     - mongo
-  ports:
-    - 8080
 
 mongo:
   image: mongo:latest
